@@ -9,5 +9,5 @@ setup(
     author='Brian Faust',
     author_email='hello@brianfaust.me',
     url='https://github.com/faustbrian/ARK-Python-Client',
-    packages=['api', 'ark', 'crypto', 'currency'],
+    install_requires=['Naked', 'Jinja2']
 )
