@@ -21,7 +21,7 @@ park = Park(
     '1.1.1'
 )
 
-transaciton = park.transactions().create('address', 'amount', 'vendor', 'secret', 'second secret')
+transaction = park.transactions().create('address', 'amount', 'vendor', 'secret', 'second secret')
 ```
 
 ## Security
@@ -31,7 +31,6 @@ If you discover a security vulnerability within this package, please send an e-m
 ## Credits
 
 - [Brian Faust](https://github.com/faustbrian)
-- [Dafty](https://github.com/dafty)
 - [All Contributors](../../contributors)
 
 ## License
