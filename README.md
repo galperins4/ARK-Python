@@ -6,6 +6,8 @@ Still under development, use at your own risk!
 
 ```bash
 yarn add github:arkecosystem/ark-js#master
+pip3 install Naked
+pip3 install Jinja2
 pip3 install https://github.com/faustbrian/ARK-Python-Client
 ```
 
