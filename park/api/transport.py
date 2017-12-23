@@ -24,7 +24,7 @@ class Transport(API):
     def transactionsFromIds(self, ids):
         return self.get('peer/transactionsFromIds', { "ids" : ','.join(ids) })
 
-    def createTransactions(self, transactions):
+    def createTransaction(self, transaction):
         return self.post('peer/transactions', { "transactions": [transaction] })
 
     def height(self):
