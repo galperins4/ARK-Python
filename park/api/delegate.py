@@ -34,7 +34,7 @@ class Delegate(API):
             secret, username, secondSecret
         )
 
-        return self.post('peer/transactions', { "transactions": [transaction] })
+        return self.client.transport().createTransaction(transaction)
 
     def nextForgers(self):
         return self.get('api/delegates/getNextForgers')

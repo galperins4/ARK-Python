@@ -9,4 +9,4 @@ class Signature(API):
     def create(self, secret, secondSecret):
         transaction = self.client.signatureBuilder().create(secret, secondSecret)
 
-        return self.post('peer/transactions', { "transactions": [transaction] })
+        return self.client.transport().createTransaction(transaction)

@@ -20,4 +20,4 @@ class Transaction(API):
             recipientId, amount, vendorField, secret, secondSecret
         )
 
-        return self.post('peer/transactions', { "transactions": [transaction] })
+        return self.client.transport().createTransaction(transaction)

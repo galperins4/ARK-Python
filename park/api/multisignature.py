@@ -17,7 +17,7 @@ class MultiSignature(API):
             secret, secondSecret, keysgroup, lifetime, min
         )
 
-        return self.post('peer/transactions', { "transactions": [transaction] })
+        return self.client.transport().createTransaction(transaction)
 
     def accounts(self, publicKey):
         return self.get('api/multisignatures/accounts', { "publicKey" : publicKey })
