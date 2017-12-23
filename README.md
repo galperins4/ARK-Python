@@ -12,7 +12,7 @@ pip3 install https://github.com/faustbrian/ARK-Python-Client/archive/master.zip
 ## Usage
 
 ```python
-from park.client import Park
+from park.park import Park
 
 park = Park(
     '127.0.0.1',
