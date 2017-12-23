@@ -9,6 +9,6 @@ setup(
     author='Brian Faust',
     author_email='hello@brianfaust.me',
     url='https://github.com/faustbrian/ARK-Python-Client',
-    packages=['park', '.api', 'park.builder'],
+    packages=['park', 'park.api', 'park.builder'],
     install_requires=['Naked', 'Jinja2', 'requests', 'pyyaml', 'MarkupSafe', 'certifi', 'urllib3', 'chardet', 'idna']
 )
