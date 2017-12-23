@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+try:
+    from setuptools import setup
+    import wheel
+except ImportError:
+    from distutils.core import setup
 
 setup(
     name='ARK Python Client',
