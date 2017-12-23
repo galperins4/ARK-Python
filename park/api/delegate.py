@@ -12,11 +12,8 @@ class Delegate(API):
             **parameters
         })
 
-    def voters(self, publicKey, parameters={}):
-        return self.get('api/delegates/voters', {
-            **{ "publicKey" : publicKey },
-            **parameters
-        })
+    def voters(self, publicKey):
+        return self.get('api/delegates/voters', { "publicKey" : publicKey })
 
     def delegate(self, parameters={}):
         return self.get('api/delegates/get', parameters)
