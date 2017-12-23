@@ -20,7 +20,8 @@ class Builder(ABC):
         }[self.client.nethash]
 
         template = self.env.get_template(script).render({
-            **{ "network" : network }, **data
+            **{ "network" : network },
+            **data
         })
 
         transactionScript=script + ".js"

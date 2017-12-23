@@ -6,11 +6,17 @@ class Delegate(API):
     def count(self):
         return self.get('api/delegates/count')
 
-    def search(self, q, parameters={}):
-        return self.get('api/delegates/search', compact('q') + parameters)
+    def search(self, query, parameters={}):
+        return self.get('api/delegates/search', {
+            **{ "q" : query },
+            **parameters
+        })
 
     def voters(self, publicKey, parameters={}):
-        return self.get('api/delegates/voters', compact('publicKey') + parameters)
+        return self.get('api/delegates/voters', {
+            **{ "publicKey" : publicKey },
+            **parameters
+        })
 
     def delegate(self, parameters={}):
         return self.get('api/delegates/get', parameters)
@@ -38,15 +44,18 @@ class Delegate(API):
 
     def enableForging(self, secret, parameters={}):
         return self.post('api/delegates/forging/enable', {
-            **{ "secret" : secret }, **parameters
+            **{ "secret" : secret },
+            **parameters
         })
 
     def disableForging(self, secret, parameters={}):
         return self.post('api/delegates/forging/disable', {
-            **{ "secret" : secret }, **parameters
+            **{ "secret" : secret },
+            **parameters
         })
 
     def forgingStatus(self, publicKey, parameters={}):
         return self.get('api/delegates/forging/status', {
-            **{ "publicKey" : publicKey }, **parameters
+            **{ "publicKey" : publicKey },
+            **parameters
         })

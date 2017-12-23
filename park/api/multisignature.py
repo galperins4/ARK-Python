@@ -6,10 +6,10 @@ class MultiSignature(API):
     def pending(self, publicKey):
         return self.get('api/multisignatures/pending', { "publicKey" : publicKey })
 
-    def sign(self, transactionId, secret, additional={}):
+    def sign(self, transactionId, secret, parameters={}):
         return self.post('api/multisignatures/sign', {
             **{ "transactionId" : transactionId, "secret" : secret },
-            **additional
+            **parameters
         })
 
     def create(self, secret, secondSecret, keysgroup, lifetime, min):
