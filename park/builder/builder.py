@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from abc import ABC
 from Naked.toolshed.shell import muterun_js

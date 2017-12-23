@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from park.api.account import Account
 from park.api.block import Block
