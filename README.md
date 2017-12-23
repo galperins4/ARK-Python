@@ -1,7 +1,5 @@
 # ARK Python Client
 
-Still under development, use at your own risk!
-
 ## Installation
 
 ```bash
