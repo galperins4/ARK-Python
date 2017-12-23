@@ -48,7 +48,7 @@ class Park:
     def transactions(self):
         return Transaction(self)
 
-    def transports(self):
+    def transport(self):
         return Transport(self)
 
     def votes(self):

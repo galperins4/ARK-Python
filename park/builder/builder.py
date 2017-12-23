@@ -19,7 +19,7 @@ class Builder(ABC):
             '313ea34c8eb705f79e7bc298b788417ff3f7116c9596f5c9875e769ee2f4ede1' : '0x2D'
         }[self.client.nethash]
 
-        template = self.env.get_template(script).render({
+        template = self.env.get_template(script + ".py").render({
             **{ "network" : network },
             **data
         })
