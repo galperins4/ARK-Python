@@ -19,6 +19,9 @@ from park.builder.vote import VoteBuilder
 
 class Park:
     def __init__(self, ip, port, nethash, version):
+        self.connection(ip, port, nethash, version)
+
+    def connection(self, ip, port, nethash, version):
         self.ip = ip
         self.port = port
         self.nethash = nethash
