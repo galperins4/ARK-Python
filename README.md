@@ -1,10 +1,16 @@
-# ARK Python Client
+# ARK Python
+
+<p align="center">
+    <img src="https://github.com/faustbrian/ARK-Python/blob/master/banner.png" />
+</p>
+
+> A [Python](https://www.python.org/) bridge for ARK.
 
 ## Installation
 
 ```bash
 yarn add github:arkecosystem/ark-js#master
-pip3 install https://github.com/faustbrian/ARK-Python-Client/archive/master.zip
+pip3 install https://github.com/faustbrian/ARK-Python/archive/master.zip
 ```
 
 ## Usage
