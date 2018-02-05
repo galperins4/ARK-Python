@@ -8,7 +8,7 @@ except ImportError:
 
 setup(
     name='ARK Python',
-    description='A Python bridge for ARK.',
+    description='An ARK bridge for Python.',
     version='1.0.0',
     author='Brian Faust',
     author_email='hello@brianfaust.me',

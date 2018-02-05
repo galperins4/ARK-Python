@@ -4,7 +4,7 @@
     <img src="https://github.com/faustbrian/ARK-Python/blob/master/banner.png" />
 </p>
 
-> A [Python](https://www.python.org/) bridge for ARK.
+> An [ARK](https://github.com/ArkEcosystem/ark-node) bridge for Python.
 
 ## Installation
 
