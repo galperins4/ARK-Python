@@ -26,6 +26,9 @@ class Transport(API):
 
     def createTransaction(self, transaction):
         return self.post('peer/transactions', { "transactions": [transaction] })
+    
+    def createBatchTransaction(self, transaction):
+        return self.post('peer/transactions', { "transactions": transaction })
 
     def height(self):
         return self.get('peer/height')
