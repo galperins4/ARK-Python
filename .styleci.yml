@@ -1,2 +1,6 @@
 php: false
-py: true
+
+py:
+  finder:
+    exclude:
+      - park/builder/templates
