@@ -2,6 +2,7 @@
 
 from park.api.api import API
 
+
 class Loader(API):
     def status(self):
         return self.get('api/loader/status')

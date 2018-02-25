@@ -2,18 +2,19 @@
 
 from park.api.api import API
 
+
 class Account(API):
     def balance(self, address):
-        return self.get('api/accounts/getBalance', { "address": address })
+        return self.get('api/accounts/getBalance', {"address": address})
 
     def publickey(self, address):
-        return self.get('api/accounts/getPublickey', { "address": address })
+        return self.get('api/accounts/getPublickey', {"address": address})
 
     def delegates(self, address):
-        return self.get('api/accounts/delegates', { "address": address })
+        return self.get('api/accounts/delegates', {"address": address})
 
     def delegatesFee(self, address):
-        return self.get('api/accounts/delegates/fee', { "address": address })
+        return self.get('api/accounts/delegates/fee', {"address": address})
 
     def vote(self, secret, publicKey, secondSecret):
         return self.put('api/accounts/delegates', {
@@ -23,7 +24,7 @@ class Account(API):
         })
 
     def account(self, address):
-        return self.get('api/accounts', { "address": address })
+        return self.get('api/accounts', {"address": address})
 
     def accounts(self):
         return self.get('api/accounts/getAllAccounts')

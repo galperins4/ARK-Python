@@ -4,6 +4,7 @@ from abc import ABC
 import json
 import requests
 
+
 class API(ABC):
     def __init__(self, client):
         self.client = client
@@ -24,12 +25,14 @@ class API(ABC):
         return self.sendRequest('delete', path, payload)
 
     def sendRequest(self, method, path, payload):
-        url=self.buildUrl(path)
+        url = self.buildUrl(path)
 
         if method in ['get', 'delete']:
-            response = getattr(requests, method)(url, headers = self.buildHeaders(), params=payload)
+            response = getattr(requests, method)(
+                url, headers=self.buildHeaders(), params=payload)
         else:
-            response = getattr(requests, method)(url, headers = self.buildHeaders(), json=payload)
+            response = getattr(requests, method)(
+                url, headers=self.buildHeaders(), json=payload)
 
         body = response.json()
 
@@ -39,8 +42,8 @@ class API(ABC):
         return body
 
     def buildUrl(self, path):
-        ip=self.client.ip
-        port=self.client.port
+        ip = self.client.ip
+        port = self.client.port
 
         return f"http://{ip}:{port}/{path}"
 

@@ -2,9 +2,10 @@
 
 from park.api.api import API
 
+
 class Block(API):
     def block(self, id):
-        return self.get('api/blocks/get', { "id" : id })
+        return self.get('api/blocks/get', {"id": id})
 
     def blocks(self, parameters={}):
         return self.get('api/blocks', parameters)

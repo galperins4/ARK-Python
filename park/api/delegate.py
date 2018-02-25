@@ -2,18 +2,16 @@
 
 from park.api.api import API
 
+
 class Delegate(API):
     def count(self):
         return self.get('api/delegates/count')
 
     def search(self, query, parameters={}):
-        return self.get('api/delegates/search', {
-            **{ "q" : query },
-            **parameters
-        })
+        return self.get('api/delegates/search', {**{"q": query}, **parameters})
 
     def voters(self, publicKey):
-        return self.get('api/delegates/voters', { "publicKey" : publicKey })
+        return self.get('api/delegates/voters', {"publicKey": publicKey})
 
     def delegate(self, parameters={}):
         return self.get('api/delegates/get', parameters)
@@ -26,13 +24,12 @@ class Delegate(API):
 
     def forgedByAccount(self, generatorPublicKey):
         return self.get('api/delegates/forging/getForgedByAccount', {
-            "generatorPublicKey" : generatorPublicKey
+            "generatorPublicKey": generatorPublicKey
         })
 
     def create(self, secret, username, secondSecret=None):
         transaction = self.client.delegateBuilder().create(
-            secret, username, secondSecret
-        )
+            secret, username, secondSecret)
 
         return self.client.transport().createTransaction(transaction)
 
@@ -41,18 +38,30 @@ class Delegate(API):
 
     def enableForging(self, secret, parameters={}):
         return self.post('api/delegates/forging/enable', {
-            **{ "secret" : secret },
-            **parameters
+            **
+            {
+                "secret": secret
+            },
+            **
+            parameters
         })
 
     def disableForging(self, secret, parameters={}):
         return self.post('api/delegates/forging/disable', {
-            **{ "secret" : secret },
-            **parameters
+            **
+            {
+                "secret": secret
+            },
+            **
+            parameters
         })
 
     def forgingStatus(self, publicKey, parameters={}):
         return self.get('api/delegates/forging/status', {
-            **{ "publicKey" : publicKey },
-            **parameters
+            **
+            {
+                "publicKey": publicKey
+            },
+            **
+            parameters
         })

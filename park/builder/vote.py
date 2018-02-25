@@ -2,6 +2,7 @@
 
 from park.builder.builder import Builder
 
+
 class VoteBuilder(Builder):
     def create(secret, delegate, secondSecret=None):
         return self.build('vote.createVote', {
