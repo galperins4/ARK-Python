@@ -5,19 +5,16 @@ from park.api.api import API
 
 class MultiSignature(API):
     def pending(self, publicKey):
-        return self.get('api/multisignatures/pending', {
-            "publicKey": publicKey
-        })
+        return self.get('api/multisignatures/pending',
+                        {"publicKey": publicKey})
 
     def sign(self, transactionId, secret, parameters={}):
         return self.post('api/multisignatures/sign', {
-            **
-            {
+            **{
                 "transactionId": transactionId,
                 "secret": secret
             },
-            **
-            parameters
+            **parameters
         })
 
     def create(self, secret, secondSecret, keysgroup, lifetime, min):
@@ -27,6 +24,5 @@ class MultiSignature(API):
         return self.client.transport().createTransaction(transaction)
 
     def accounts(self, publicKey):
-        return self.get('api/multisignatures/accounts', {
-            "publicKey": publicKey
-        })
+        return self.get('api/multisignatures/accounts',
+                        {"publicKey": publicKey})

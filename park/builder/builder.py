@@ -28,7 +28,9 @@ class Builder(ABC):
         }[self.client.nethash]
 
         template = self.env.get_template(script + ".py").render({
-            **{ "network" : network },
+            **{
+                "network": network
+            },
             **data
         })
 

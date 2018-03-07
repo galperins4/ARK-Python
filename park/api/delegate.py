@@ -23,9 +23,8 @@ class Delegate(API):
         return self.get('api/delegates/fee')
 
     def forgedByAccount(self, generatorPublicKey):
-        return self.get('api/delegates/forging/getForgedByAccount', {
-            "generatorPublicKey": generatorPublicKey
-        })
+        return self.get('api/delegates/forging/getForgedByAccount',
+                        {"generatorPublicKey": generatorPublicKey})
 
     def create(self, secret, username, secondSecret=None):
         transaction = self.client.delegateBuilder().create(
@@ -38,30 +37,24 @@ class Delegate(API):
 
     def enableForging(self, secret, parameters={}):
         return self.post('api/delegates/forging/enable', {
-            **
-            {
+            **{
                 "secret": secret
             },
-            **
-            parameters
+            **parameters
         })
 
     def disableForging(self, secret, parameters={}):
         return self.post('api/delegates/forging/disable', {
-            **
-            {
+            **{
                 "secret": secret
             },
-            **
-            parameters
+            **parameters
         })
 
     def forgingStatus(self, publicKey, parameters={}):
         return self.get('api/delegates/forging/status', {
-            **
-            {
+            **{
                 "publicKey": publicKey
             },
-            **
-            parameters
+            **parameters
         })
