@@ -24,9 +24,9 @@ class Builder(ABC):
             '313ea34c8eb705f79e7bc298b788417ff3f7116c9596f5c9875e769ee2f4ede1':
             '0x2D',
             'f1ef11be7a879671b3019a785c9a2c9dbd9d800b05644d26ad132275ffe2dd48':
-            '0x50,
+            '0x50',
             'b4e87739ca85f7eabf844a643930573e9a2dd9da291662e74d26962b5c3f0ed9':
-            '0x42
+            '0x42'
         }[self.client.nethash]
 
         template = self.env.get_template(script + ".py").render({
