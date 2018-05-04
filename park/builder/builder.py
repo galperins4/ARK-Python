@@ -28,6 +28,8 @@ class Builder(ABC):
             'b4e87739ca85f7eabf844a643930573e9a2dd9da291662e74d26962b5c3f0ed9':
             '0x42',
             'bee1634649fc6a759e5fdb8f3c4bcb4b5189c1f2a6b48284a6445f3f09db844e':
+            '0x37',
+            'd22496e7c2af861b726f081e2c4db04d505549a5915f418fbca6842c30e3c831':
             '0x37'
         }[self.client.nethash]
 
