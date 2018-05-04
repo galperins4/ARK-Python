@@ -18,19 +18,19 @@ class Builder(ABC):
     def build(self, script, data):
         network = {
             '6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988':
-            "0x17",
+            "0x17", # ark mainnet
             '578e820911f24e039733b45e4882b73e301f813a0d2c31330dafda84534ffa23':
-            "0x1E",
+            "0x1E", # ark devnet
             '313ea34c8eb705f79e7bc298b788417ff3f7116c9596f5c9875e769ee2f4ede1':
-            '0x2D',
+            '0x2D', # kapu mainnet
             'f1ef11be7a879671b3019a785c9a2c9dbd9d800b05644d26ad132275ffe2dd48':
-            '0x50',
+            '0x50', # kapu devnet
             'b4e87739ca85f7eabf844a643930573e9a2dd9da291662e74d26962b5c3f0ed9':
-            '0x42',
+            '0x42', # persona testnet
             'bee1634649fc6a759e5fdb8f3c4bcb4b5189c1f2a6b48284a6445f3f09db844e':
-            '0x37',
+            '0x37', # ripa mainnet
             'd22496e7c2af861b726f081e2c4db04d505549a5915f418fbca6842c30e3c831':
-            '0x37'
+            '0x37' # persona mainnet
         }[self.client.nethash]
 
         template = self.env.get_template(script + ".py").render({
