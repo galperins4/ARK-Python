@@ -29,7 +29,7 @@ class Builder(ABC):
             '0x42',  # persona testnet
             'bee1634649fc6a759e5fdb8f3c4bcb4b5189c1f2a6b48284a6445f3f09db844e':
             '0x37',  # ripa mainnet
-            'd22496e7c2af861b726f081e2c4db04d505549a5915f418fbca6842c30e3c831':
+            '14b55c1de06caa015362d59ad97a144bc3c9fc2b50ece84b78d13ceaeaf7d8fb':
             '0x37'  # persona mainnet
         }[self.client.nethash]
 
