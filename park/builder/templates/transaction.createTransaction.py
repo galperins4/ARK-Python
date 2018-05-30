@@ -1,4 +1,4 @@
-var ark = require("arkjs");
+var ark = require("{{ javascript }}");
 
 ark.crypto.setNetworkVersion({{ network }});
 
