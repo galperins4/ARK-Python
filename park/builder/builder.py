@@ -51,7 +51,17 @@ class Builder(ABC):
             {
                 "netPubKey": "0x37",
                 'js': 'persona-js'
-            }  # persona mainnet
+            }, # persona mainnet
+            '9d39602ff3d69780da2c9f5ed5e24451409f6511e226bd540dd84a375508ce5b':
+            {
+                "netPubKey": "0x52",
+                'js': 'arkjs'
+            },  # swapblocks testnet
+            'testfill':
+            {
+                "netPubKey": "testfill",
+                'js': 'arkjs'
+            }  # swapblocks mainnet
         }[self.client.nethash]
 
         template = self.env.get_template(script + ".py").render({
