@@ -57,9 +57,9 @@ class Builder(ABC):
                 "netPubKey": "0x52",
                 'js': 'arkjs'
             },  # swapblocks testnet
-            'testfill':
+            'd21f07a10a8314d558132de8a3848e6fa9edde754638d1aacd381c6efb8be81d':
             {
-                "netPubKey": "testfill",
+                "netPubKey": "0x4B",
                 'js': 'arkjs'
             }  # swapblocks mainnet
         }[self.client.nethash]
