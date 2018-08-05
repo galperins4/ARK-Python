@@ -45,7 +45,7 @@ class API(ABC):
         ip = self.client.ip
         port = self.client.port
 
-        return f"http://{ip}:{port}/{path}"
+        return "http://{0}:{1}/{2}".format(ip, port, path)
 
     def buildHeaders(self):
         return {
