@@ -66,7 +66,7 @@ class Builder(ABC):
             {
                 "netPubKey": "0x3A",
                 'js': 'qreditjs'
-            },  # qredit mainnet
+            }  # qredit mainnet
         }[self.client.nethash]
 
         template = self.env.get_template(script + ".py").render({
