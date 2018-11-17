@@ -61,7 +61,12 @@ class Builder(ABC):
             {
                 "netPubKey": "0x4B",
                 'js': 'arkjs'
-            }  # swapblocks mainnet
+            },  # swapblocks mainnet
+            '5e67037fd290ba7ab378e84a591d251c46eb9770eb134983771fd602233bf193':
+            {
+                "netPubKey": "0x3A",
+                'js': 'qreditjs'
+            },  # qredit mainnet
         }[self.client.nethash]
 
         template = self.env.get_template(script + ".py").render({
